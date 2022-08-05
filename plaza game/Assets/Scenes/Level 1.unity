@@ -2013,6 +2013,7 @@ GameObject:
   - component: {fileID: 891965653}
   - component: {fileID: 891965652}
   - component: {fileID: 891965651}
+  - component: {fileID: 891965655}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -2099,6 +2100,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &891965655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891965650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &897327194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4585,7 +4599,6 @@ MonoBehaviour:
   JumpSound: {fileID: 8300000, guid: 311bde2d611c7744e9b87713df344dd4, type: 3}
   CoinSound: {fileID: 8300000, guid: 50dee191f1af3994c99e69c8c4e2c104, type: 3}
   scoreText: {fileID: 1554827769}
-  gameOverText: {fileID: 0}
 --- !u!82 &1906369249
 AudioSource:
   m_ObjectHideFlags: 0
