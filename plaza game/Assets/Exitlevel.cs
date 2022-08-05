@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitLevel1 : MonoBehaviour
+public class Exitlevel : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void StartExit()
+    void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
     }
 
     // Update is called once per frame

@@ -12,7 +12,6 @@ public class movement : MonoBehaviour
 	public AudioClip JumpSound = null;
 	public AudioClip CoinSound = null;
 	public TextMeshProUGUI scoreText;
-	public TextMeshProUGUI gameOverText;
 
 	private Rigidbody mRigidBody = null;
 	private int score;
@@ -24,7 +23,7 @@ public class movement : MonoBehaviour
 		PlayAudio = GetComponent<AudioSource>();
 		score = 0;
 		UpdateScore(0);
-		gameOverText.gameObject.SetActive(true);
+		
 	}
 
 	void FixedUpdate()
