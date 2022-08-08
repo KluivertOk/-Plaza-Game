@@ -2,9 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-//<summary>
-//Ball movement controlls and simple third-person-style camera
-//</summary>
+
+
 public class movement : MonoBehaviour
 {
 
@@ -51,7 +50,7 @@ public class movement : MonoBehaviour
 		{
 			Vector3 direction = (Vector3.up * 2 + Vector3.back) * 2;
 			RaycastHit hit;
-			Debug.DrawLine(transform.position, transform.position + direction, Color.red);
+			
 			if (Physics.Linecast(transform.position, transform.position + direction, out hit))
 			{
 				ViewCamera.transform.position = hit.point;
