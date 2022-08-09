@@ -7,6 +7,7 @@ using TMPro;
 public class movement : MonoBehaviour
 {
 
+	//this creates options in the ball component to has a camera, sounds and texts
 	public GameObject ViewCamera = null;
 	public AudioClip JumpSound = null;
 	public AudioClip CoinSound = null;
@@ -16,6 +17,7 @@ public class movement : MonoBehaviour
 	private int score;
 	private AudioSource PlayAudio = null;
 
+	//here i am calling some of the objects created above
 	void Start()
 	{
 		mRigidBody = GetComponent<Rigidbody>();
@@ -24,7 +26,8 @@ public class movement : MonoBehaviour
 		UpdateScore(0);
 		
 	}
-
+	
+	//here i make the movement of the ball and add the jump sound
 	void FixedUpdate()
 	{
 		if (mRigidBody != null)
@@ -46,6 +49,7 @@ public class movement : MonoBehaviour
 			}
 
 		}
+		//here is where i adust the camera setting
 		if (ViewCamera != null)
 		{
 			Vector3 direction = (Vector3.up * 2 + Vector3.back) * 2;
@@ -63,7 +67,7 @@ public class movement : MonoBehaviour
 		}
 	}
 
-
+	//this is where i make the coin have sound and make it a trigger
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag.Equals("Coin"))
@@ -74,6 +78,7 @@ public class movement : MonoBehaviour
 		}
 	}
 
+	//this is how i update the score for the coin
 	void UpdateScore(int scoreAdd)
 	{
 		score += scoreAdd;
